@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: 100px minmax(100px,1fr);
+    grid-template-rows: 150px minmax(100px,1fr);
     grid-template-areas: 
     "sidebar header "
     "sidebar content-block ";
@@ -10,15 +10,76 @@
 #header {
   grid-area: header;
    background-color: white;
+   display: grid;
+   grid-template-columns: 3fr 2fr;
+   grid-template-rows: 1fr 1fr;
+   gap: 15px;
+   padding: 20px 40px 25px 25px;
 }
+button {
+    background-color: #0284c7;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+}
+.buttons-div {
+    display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-topright{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+    margin-right: 25px;
+}
+.image-container {
+    height: 40px;
+    width: 40px;
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+.image-container.main{
+    height: 60px;
+    width: 60px;
+}
+.input-div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.user-div{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+input {
+    display: inline-block;
+    height: 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: #e5e7eb;
+    flex: 1;
+}
+h1 {
+    font-size: 15px;
+}
+
+
+
+
 #sidebar {
   grid-area: sidebar;
   background-color: #0284c7;
   display: grid;
   grid-template-columns: 30px 1fr;
   grid-template-rows: 50px 1fr 1fr ;
-  justify-content: space-around;
-  align-items: center;
   padding: 15px 45px 0px 15px;
   gap:10px;
 }
@@ -77,6 +138,10 @@ display: grid;
     padding: 20px;
     position: relative;
 }
+.rightbar-item,.tranding {
+    display: flex;
+    gap: 15px;
+}
 .rightbar-list-item{
     padding-top:10px;
     padding-bottom: 10px;
@@ -84,6 +149,7 @@ display: grid;
     border-top: 0.5px solid  #9ca3af;
 
 }
+
 .projects-item {
     position: relative;
     border-left: 5px solid orange;
@@ -127,9 +193,36 @@ display: grid;
 .list.icons {
     align-items: center;
 }
+.list.icons.trending {
+    justify-content: space-around;
+}
+.list.trending{
+    justify-content: space-around;
+}
+.list-item.trending {
+    height: 40px;
+}
+.list-item.trending>img{
+    height: 40px;
+}
 
-
-
+.list-item.trending.icon{
+    height: 40px;
+    width: 40px;
+    background-color: lightblue;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+.list-item.trending.icon:nth-child(2){
+    background-color: orange;
+}
+.list-item.trending.icon:nth-child(3){
+    background-color: pink;
+}
+.list-item.trending.icon:nth-child(4){
+    background-color: lightgreen;
+}
 
 
 
